@@ -1,0 +1,223 @@
+[
+    {
+        "game_type" : "Points Rummy",
+        "sub_type" : "Points",
+        "bet_value" : 0.1,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 0.1,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Points Rummy",
+        "sub_type" : "Points",
+        "bet_value" : 0.5,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 10.0,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Points Rummy",
+        "sub_type" : "Points",
+        "bet_value" : 1,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 15.0,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Points Rummy",
+        "sub_type" : "Points",
+        "bet_value" : 5,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 20.0,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Points Rummy",
+        "sub_type" : "Points",
+        "bet_value" : 10,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 20.0,
+        "is_active" : true
+    },{
+        "game_type" : "Points Rummy",
+        "sub_type" : "Points",
+        "bet_value" : 0.1,
+        "max_seat" : 6,
+        "no_of_player_start_table" : 2,
+        "rate" : 10.0,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Points Rummy",
+        "sub_type" : "Points",
+        "bet_value" : 0.5,
+        "max_seat" : 6,
+        "no_of_player_start_table" : 2,
+        "rate" : 10.0,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Points Rummy",
+        "sub_type" : "Points",
+        "bet_value" : 1,
+        "max_seat" : 6,
+        "no_of_player_start_table" : 2,
+        "rate" : 15.0,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Points Rummy",
+        "sub_type" : "Points",
+        "bet_value" : 5,
+        "max_seat" : 6,
+        "no_of_player_start_table" : 2,
+        "rate" : 20.0,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Points Rummy",
+        "sub_type" : "Points",
+        "bet_value" : 10,
+        "max_seat" : 6,
+        "no_of_player_start_table" : 2,
+        "rate" : 20.0,
+        "is_active" : true
+    },{
+        "game_type" : "Pool Rummy",
+        "sub_type" : "101 Pool",
+        "bet_value" : 5,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 10,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Pool Rummy",
+        "sub_type" : "101 Pool",
+        "bet_value" : 10,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 10.0,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Pool Rummy",
+        "sub_type" : "101 Pool",
+        "bet_value" : 20,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 15.0,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Pool Rummy",
+        "sub_type" : "101 Pool",
+        "bet_value" : 50,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 20.0,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Pool Rummy",
+        "sub_type" : "101 Pool",
+        "bet_value" : 100,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 30.0,
+        "is_active" : true
+    },{
+        "game_type" : "Pool Rummy",
+        "sub_type" : "201 Pool",
+        "bet_value" : 5,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 10,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Pool Rummy",
+        "sub_type" : "201 Pool",
+        "bet_value" : 10,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 10.0,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Pool Rummy",
+        "sub_type" : "201 Pool",
+        "bet_value" : 20,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 15.0,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Pool Rummy",
+        "sub_type" : "201 Pool",
+        "bet_value" : 50,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 20.0,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Pool Rummy",
+        "sub_type" : "201 Pool",
+        "bet_value" : 100,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 30.0,
+        "is_active" : true
+    },{
+        "game_type" : "Deal Rummy",
+        "sub_type" : "BestOf2",
+        "bet_value" : 5,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 10,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Deal Rummy",
+        "sub_type" : "BestOf2",
+        "bet_value" : 10,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 10.0,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Deal Rummy",
+        "sub_type" : "BestOf2",
+        "bet_value" : 20,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 15.0,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Deal Rummy",
+        "sub_type" : "BestOf2",
+        "bet_value" : 50,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 20.0,
+        "is_active" : true
+    },
+    {
+        "game_type" : "Deal Rummy",
+        "sub_type" : "BestOf2",
+        "bet_value" : 100,
+        "max_seat" : 2,
+        "no_of_player_start_table" : 2,
+        "rate" : 30.0,
+        "is_active" : true
+    }
+]

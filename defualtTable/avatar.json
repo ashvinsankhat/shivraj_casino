@@ -1,0 +1,13 @@
+[{
+    "profile_url" : "image_avatar/avatar_1.png", 
+    "is_active" : true
+},{
+    "profile_url" : "image_avatar/avatar_2.png", 
+    "is_active" : true
+},{
+    "profile_url" : "image_avatar/avatar_3.png", 
+    "is_active" : true
+},{
+    "profile_url" : "image_avatar/avatar_4.png", 
+    "is_active" : true
+}]

@@ -1,0 +1,774 @@
+{
+    "SOCKET_URL": "http://3.108.67.202:3001",
+    "ip": "::1",
+    "config": {
+        "BASE_URL": "http://3.108.67.202:3001/"
+    }
+}
+
+ADMIN_ROULETTE_GAME_INFO
+ADMIN_ROULETTE_ZERO_GAME_INFO
+ADMIN_SINGLE_CHANCE_GAME_INFO
+ADMIN_TRIPLE_GAME_INFO
+ADMIN_LUCKY_CARD_GAME_INFO
+ADMIN_LUCKY_CARD_12_GAME_INFO
+ADMIN_SORAT_GAME_INFO
+ADMIN_SINGLE_CHANCE_GAME_INFO
+ADMIN_SINGLE_CHANCE_3D_GAME_INFO
+ADMIN_ROULETTE_ZERO_3D_GAME_INFO
+ADMIN_ROULETTE_EUROPEAN_GAME_INFO
+ADMIN_ANDAR_BAHAR_GAME_INFO
+
+ANDAR_BAHAR_GAME_INFO
+ANDAR_BAHAR_CLOSE_GAME
+ANDAR_BAHAR_PLACE_BET
+ANDAR_BAHAR_REPEAT_BET
+ANDAR_BAHAR_GAME_HISTORY
+ANDAR_BAHAR_CLAIM
+ANDAR_BAHAR_ALL_CLAIM
+ANDAR_BAHAR_CANCEL_BET
+ANDAR_BAHAR_GAME_SPECIFIC_INFO
+ANDAR_BAHAR_REPORT
+ANDAR_BAHAR_AUTO_ON_OFF
+
+ANDAR_BAHAR_INIT_GAME
+ANDAR_BAHAR_GAME_TIMER_START
+ANDAR_BAHAR_START_SPIN
+ANDAR_BAHAR_WINNER_DECLARE
+ANDAR_BAHAR_WIN
+ANDAR_BAHAR_LOSS
+
+SINGLE_CHANCE_3D_GAME_INFO
+SINGLE_CHANCE_3D_CLOSE_GAME
+SINGLE_CHANCE_3D_PLACE_BET
+SINGLE_CHANCE_3D_REPEAT_BET
+SINGLE_CHANCE_3D_GAME_HISTORY
+SINGLE_CHANCE_3D_CLAIM
+SINGLE_CHANCE_3D_ALL_CLAIM
+SINGLE_CHANCE_3D_CANCEL_BET
+SINGLE_CHANCE_3D_GAME_SPECIFIC_INFO
+SINGLE_CHANCE_3D_REPORT
+SINGLE_CHANCE_3D_AUTO_ON_OFF
+
+SINGLE_CHANCE_3D_INIT_GAME
+SINGLE_CHANCE_3D_GAME_TIMER_START
+SINGLE_CHANCE_3D_START_SPIN
+SINGLE_CHANCE_3D_WINNER_DECLARE
+SINGLE_CHANCE_3D_WIN
+SINGLE_CHANCE_3D_LOSS
+
+LUCKY_SORAT_GAME_INFO
+LUCKY_SORAT_CLOSE_GAME
+LUCKY_SORAT_PLACE_BET
+LUCKY_SORAT_REPEAT_BET
+LUCKY_SORAT_GAME_HISTORY
+LUCKY_SORAT_CLAIM
+LUCKY_SORAT_ALL_CLAIM
+LUCKY_SORAT_CANCEL_BET
+LUCKY_SORAT_GAME_SPECIFIC_INFO
+LUCKY_SORAT_REPORT
+LUCKY_SORAT_AUTO_ON_OFF
+
+LUCKY_SORAT_INIT_GAME
+LUCKY_SORAT_GAME_TIMER_START
+LUCKY_SORAT_START_SPIN
+LUCKY_SORAT_WINNER_DECLARE
+LUCKY_SORAT_WIN
+LUCKY_SORAT_LOSS
+
+
+=>Login Events:
+1)App Lunch Details : 
+    Request : 
+        {
+            "en" : "TRIPLE_GAME_INFO",
+            "data" : {
+                
+            }
+        }
+        {
+            "en" : "ROULETTE_CLOSE_GAME",
+            "data" : {
+                
+            }
+        }
+    Response(Error): 
+        {
+            "err": true,
+            "msg": "Please Register User!",
+            "errcode": "0006",
+            "en": "AppLunchDetails",
+            "data": {
+               "user_name" : "9898512513",
+                "password" : "android"
+            },
+            "title": "Error!",
+            "sendTime": "2021-11-13T11:19:07.930Z"
+        }
+    Response(Success): 
+        {
+            "err": false,
+            "msg": "Data delivered successfully.!!",
+            "errcode": "0000",
+            "en": "AppLunchDetails",
+            "data": {
+                "_id": "61b72f63368ce514747ac086",
+                "id": 15,
+                "display_user_name": "ludo_15",
+                "user_name": "0000012345",
+                "unique_id": "ludo_0000000015",
+                "chips": 0,
+                "game_winning": 0,
+                "table_id": "",
+                "rejoin": false,
+            },
+            "title": "Alert",
+            "sendTime": "2021-12-13T11:32:51.985Z"
+        }
+2)wallet Update : 
+    Response(Success): 
+    {
+        "err": false,
+        "msg": "",
+        "errcode": "0000",
+        "en": "UPDATED_WALLET",
+        "data": {
+            "game_winning": 0,
+            "chips": 9958,
+            "t": "Lucky card bet"
+        },
+        "title": "Alert",
+        "send": "2022-03-14T06:49:34.507Z"
+    }
+3)Get 16 Card Game Info : 
+    Request : 
+        {
+            "en" : "TRIPLE_GAME_INFO",
+            "data" : {
+                
+            }
+        }
+    Response(Error): 
+        {
+            "err": true,
+            "msg": "Please Register User!",
+            "errcode": "0006",
+            "en": "LUCKY_CARD_GAME_INFO",
+            "data": {
+               
+            },
+            "title": "Error!",
+            "sendTime": "2021-11-13T11:19:07.930Z"
+        }
+    Response(Success): 
+        {
+            "err": false,
+            "msg": "Data delivered successfully.!!",
+            "errcode": "0000",
+            "en": "LUCKY_CARD_GAME_INFO",
+            "data": {
+                "_id": "622cd46f78565e29fc764877",
+                "game_id": 18399,
+                "game_state": "start_spin",
+                "winners": 0,
+                "bet_users_cards": {},
+                "win_card": "l-14",
+                "winner_users": [],
+                "last_win_cards": [
+                    "k-11",
+                    "f-11",
+                    "k-11",
+                    "f-12",
+                    "c-12",
+                    "c-14",
+                    "k-12",
+                    "k-12",
+                    "c-11",
+                    "l-14"
+                ],
+                "createdAt": "2022-03-12T17:12:15.661Z",
+                "updatedAt": "2022-04-05T04:51:42.438Z",
+                "__v": 0,
+                "game_time": {
+                    "init_time": "2022-04-05T04:50:06.390Z",
+                    "gst_time": "2022-04-05T04:50:11.397Z",
+                    "spin_time": "2022-04-05T04:51:42.437Z"
+                },
+                "game_config": {
+                    "REWARD": {
+                        "5": 2,
+                        "10": 2,
+                        "20": 2,
+                        "50": 2,
+                        "100": 2,
+                        "500": 2
+                    },
+                    "DRAW_TIME": 90
+                },
+                "timer": 4,
+                "total_wallet": 5200,
+                "total_bet": 0,
+                "win": 0,
+                "bet_config": {
+                    "min": {
+                        "in": 5,
+                        "out": 10
+                    },
+                    "max": {
+                        "in": 10000,
+                        "out": 50000
+                    }
+                }
+            },
+            "title": "Alert",
+            "sendTime": "2022-04-05T04:51:43.352Z"
+        }
+4)Close 16 Card Game : 
+    Request : 
+        {
+            "en" : "LUCKY_CARD_CLOSE_GAME",
+            "data" : {
+            }
+        }
+    Response(Success): 
+        {
+            "err": false,
+            "msg": "Data delivered successfully.!!",
+            "errcode": "0000",
+            "en": "LUCKY_CARD_CLOSE_GAME",
+            "data": {
+                "done": true
+            },
+            "title": "Alert",
+            "sendTime": "2022-03-24T06:48:24.287Z"
+        }
+5)Bet Place : 
+    Request : 
+        {
+            "en" : "TRIPLE_PLACE_BET",
+            "data" : {
+                "card_details": {
+                    "1": 10,
+                    "2": 10,
+                    "3": 10,
+                    "4": 10,
+                    "5": 10,
+                    "6": 10,
+                    "7": 10,
+                    "8": 10,
+                    "9": 10                    
+                }
+            }
+        }
+    Response(Error): 
+        {
+            "err": true,
+            "msg": "Please Register User!",
+            "errcode": "0006",
+            "en": "LUCKY_CARD_PLACE_BET",
+            "data": {
+               "card_details" : {
+                    "l-10":100
+                }
+            },
+            "title": "Error!",
+            "sendTime": "2021-11-13T11:19:07.930Z"
+        }
+        {
+            "err": true,
+            "msg": "Please place valid Boot!",
+            "errcode": "1025",
+            "en": "LUCKY_CARD_PLACE_BET",
+            "data": {
+               "card_details" : {
+                    "l-10":100
+                }
+            },
+            "title": "Error!",
+            "send": "2022-03-14T06:32:26.065Z"
+        }
+        {
+            "err": true,
+            "msg": "Please select card!",
+            "errcode": "1026",
+            "en": "LUCKY_CARD_PLACE_BET",
+            "data": {
+                "card_details" : {
+                    "l-10":100
+                }
+            },
+            "title": "Error!",
+            "send": "2022-03-14T06:33:03.700Z"
+        }
+        {
+            "err": true,
+            "msg": "Insufficient wallet, Please add Cash In Game!",
+            "errcode": "1026",
+            "en": "LUCKY_CARD_PLACE_BET",
+            "data": {
+                "card_details" : {
+                    "l-10":100
+                }
+            },
+            "title": "Error!",
+            "send": "2022-03-14T06:33:03.700Z"
+        }
+    Response(Success): 
+        {
+            "err": false,
+            "msg": "",
+            "errcode": "0000",
+            "en": "LUCKY_CARD_PLACE_BET",
+            "data": {
+                "game_id": 32,
+                "card_details" : {
+                    "l-10" : 100
+                }
+                "_id": "622ee57ecefb872f4813c4e6",
+                "user_id": "622edd8bc260d02e1eb2c787",
+                "createdAt": "2022-03-14T06:49:34.511Z",
+                "updatedAt": "2022-03-14T06:49:34.511Z",
+                "__v": 0
+            },
+            "title": "Alert",
+            "send": "2022-03-14T06:49:34.579Z"
+        }
+6)Repeat Bet Place : 
+    Request : 
+        {
+            "en" : "LUCKY_CARD_REPEAT_BET",
+            "data" : {
+            }
+        }
+    Response(Error): 
+        {
+            "err": true,
+            "msg": "Please Register User!",
+            "errcode": "0006",
+            "en": "LUCKY_CARD_REPEAT_BET",
+            "data": {
+            },
+            "title": "Error!",
+            "sendTime": "2021-11-13T11:19:07.930Z"
+        }
+        {
+            "err": true,
+            "msg": "No any Last Bet!",
+            "errcode": "1025",
+            "en": "LUCKY_CARD_REPEAT_BET",
+            "data": {
+            },
+            "title": "Error!",
+            "send": "2022-03-14T06:32:26.065Z"
+        }
+        {
+            "err": true,
+            "msg": "Insufficient wallet, Please add Cash In Game!",
+            "errcode": "1026",
+            "en": "LUCKY_CARD_REPEAT_BET",
+            "data": {
+            },
+            "title": "Error!",
+            "send": "2022-03-14T06:33:03.700Z"
+        }
+    Response(Success): 
+        {
+            "err": false,
+            "msg": "",
+            "errcode": "0000",
+            "en": "LUCKY_CARD_REPEAT_BET",
+            "data": {
+                "game_id": 32,
+                "card": "all k",
+                "bet": 100,
+                "_id": "622ee57ecefb872f4813c4e6",
+                "user_id": "622edd8bc260d02e1eb2c787",
+                "createdAt": "2022-03-14T06:49:34.511Z",
+                "updatedAt": "2022-03-14T06:49:34.511Z",
+                "__v": 0
+            },
+            "title": "Alert",
+            "send": "2022-03-14T06:49:34.579Z"
+        }
+7)Get Game History: 
+    Request : 
+        {
+            "en" : "LUCKY_CARD_16_GAME_HISTORY",
+            "data" : {
+            }
+        }
+    Response(Error): 
+        {
+            "err": true,
+            "msg": "Please Register User!",
+            "errcode": "0006",
+            "en": "LUCKY_CARD_16_GAME_HISTORY",
+            "data": {
+            },
+            "title": "Error!",
+            "sendTime": "2021-11-13T11:19:07.930Z"
+        }
+    Response(Success): 
+        {
+            "err": false,
+            "msg": "Data delivered successfully.!!",
+            "errcode": "0000",
+            "en": "LUCKY_CARD_16_GAME_HISTORY",
+            "data": {
+                "game_lists": [
+                    {
+                        "game_id": 13320,
+                        "ticket_id": "E1L4JZKUEI",
+                        "total_bet_amount": 100,
+                        "total_win_amount": 200,
+                        "draw_time": "2022-03-30T07:11:49.086Z",
+                        "status": 2,
+                        "_id": "62440281b85a632e946796e1",
+                        "card_details": {
+                            "l-11": 100
+                        },
+                        "createdAt": "2022-03-30T07:10:57.306Z"
+                    }
+                ]
+            },
+            "title": "Alert",
+            "sendTime": "2022-03-30T07:12:18.297Z"
+        }
+8)Claim Specific Data: 
+    Request : 
+        {
+            "en" : "ANDAR_BAHAR_CLAIM",
+            "data" : {
+            }
+        }
+    Response(Error): 
+        {
+            "err": true,
+            "msg": "Please Register User!",
+            "errcode": "0006",
+            "en": "LUCKY_CARD_16_CLAIM",
+            "data": {
+            },
+            "title": "Error!",
+            "sendTime": "2021-11-13T11:19:07.930Z"
+        }
+        {
+            "err": true,
+            "msg": "No bet found!",
+            "errcode": "0006",
+            "en": "LUCKY_CARD_16_CLAIM",
+            "data": {
+            },
+            "title": "Error!",
+            "sendTime": "2021-11-13T11:19:07.930Z"
+        }
+    Response(Success): 
+        {
+            "err": false,
+            "msg": "Data delivered successfully.!!",
+            "errcode": "0000",
+            "en": "LUCKY_CARD_16_CLAIM",
+            "data": {
+                "game_id": 13233,
+                "ticket_id": "BRJUIYYFDR",
+                "total_bet_amount": 100,
+                "total_win_amount": 0,
+                "draw_time": "2022-03-30T03:57:04.711Z",
+                "status": 4,
+                "_id": "6243d4de04a0f240ccceec4e",
+                "card_details": {
+                    "l-11": 100
+                },
+                "createdAt": "2022-03-30T03:56:14.784Z"            
+            },
+            "title": "Alert",
+            "sendTime": "2022-03-30T04:00:53.400Z"
+        }
+9)Claim All Game : 
+    Request : 
+        {
+            "en" : "LUCKY_CARD_16_ALL_CLAIM",
+            "data" : {
+            }
+        }
+    Response(Error): 
+        {
+            "err": true,
+            "msg": "Please Register User!",
+            "errcode": "0006",
+            "en": "LUCKY_CARD_16_ALL_CLAIM",
+            "data": {
+            },
+            "title": "Error!",
+            "sendTime": "2021-11-13T11:19:07.930Z"
+        }
+    Response(Success): 
+        {
+            "err": false,
+            "msg": "Data delivered successfully.!!",
+            "errcode": "0000",
+            "en": "LUCKY_CARD_16_ALL_CLAIM",
+            "data": {
+                "done": true
+            },
+            "title": "Alert",
+            "sendTime": "2022-03-30T08:13:47.505Z"
+        }
+10)Cancel BET : 
+    Request : 
+        {
+            "en" : "LUCKY_CARD_16_CANCEL_BET",
+            "data" : {
+                "g_id" : ""
+            }
+        }
+    Response(Error): 
+        {
+            "err": true,
+            "msg": "Please Register User!",
+            "errcode": "0006",
+            "en": "LUCKY_CARD_16_CANCEL_BET",
+            "data": {
+            },
+            "title": "Error!",
+            "sendTime": "2021-11-13T11:19:07.930Z"
+        }
+    Response(Success): 
+        {
+            "err": false,
+            "msg": "Data delivered successfully.!!",
+            "errcode": "0000",
+            "en": "LUCKY_CARD_16_CANCEL_BET",
+            "data": {
+                "game_id": 13369,
+                "ticket_id": "LU667LWV51",
+                "total_bet_amount": 100,
+                "total_win_amount": 0,
+                "total_end_amount": 0,
+                "draw_time": "2022-03-30T08:33:27.341Z",
+                "status": 1,
+                "_id": "624415eeec1a57395c1ae5f6",
+                "user_id": "622edd8bc260d02e1eb2c787",
+                "card_details": {
+                    "l-10": 100
+                },
+                "createdAt": "2022-03-30T08:33:50.140Z",
+                "updatedAt": "2022-03-30T08:34:01.093Z",
+                "__v": 0
+            },
+            "title": "Alert",
+            "sendTime": "2022-03-30T08:34:01.740Z"
+        }
+11)Get Specific Game Info : 
+    Request : 
+        {
+            "en" : "LUCKY_CARD_16_GAME_SPECIFIC_INFO",
+            "data" : {
+                "g_id" : ""
+            }
+        }
+    Response(Error): 
+        {
+            "err": true,
+            "msg": "Please Register User!",
+            "errcode": "0006",
+            "en": "LUCKY_CARD_16_GAME_SPECIFIC_INFO",
+            "data": {
+            },
+            "title": "Error!",
+            "sendTime": "2021-11-13T11:19:07.930Z"
+        }
+    Response(Success): 
+        {
+            "err": false,
+            "msg": "Data delivered successfully.!!",
+            "errcode": "0000",
+            "en": "LUCKY_CARD_16_GAME_SPECIFIC_INFO",
+            "data": {
+                "_id": "62440464b9cfcf4dece9788b",
+                "game_id": 13325,
+                "ticket_id": "J31XMCWZQX",
+                "total_bet_amount": 100,
+                "total_win_amount": 200,
+                "draw_time": "2022-03-30T07:20:18.597Z",
+                "status": 3,
+                "card_details": {
+                    "l-11": 100
+                },
+                "createdAt": "2022-03-30T07:19:00.785Z"
+            },
+            "title": "Alert",
+            "sendTime": "2022-03-30T08:15:37.545Z"
+        }
+12)Get Report Data : 
+    Request : 
+        {
+            "en" : "LUCKY_CARD_12_REPORT",
+            "data" : {
+                "is_filter" : false
+                "start_date" : " ",
+                "end_date"   : " "
+            }
+        }
+    Response(Error): 
+        {
+            "err": true,
+            "msg": "Please Register User!",
+            "errcode": "0006",
+            "en": "LUCKY_CARD_16_GAME_SPECIFIC_INFO",
+            "data": {
+            },
+            "title": "Error!",
+            "sendTime": "2021-11-13T11:19:07.930Z"
+        }
+    Response(Success): 
+        {
+            "err": false,
+            "msg": "Data delivered successfully.!!",
+            "errcode": "0000",
+            "en": "LUCKY_CARD_16_GAME_SPECIFIC_INFO",
+            "data": {
+                "game_id": 13233,
+                "ticket_id": "BRJUIYYFDR",
+                "total_bet_amount": 100,
+                "total_win_amount": 0,
+                "draw_time": "2022-03-30T03:57:04.711Z",
+                "status": 2,
+                "_id": "6243d4de04a0f240ccceec4e",
+                "card_details": {
+                    "l-11": 100
+                },
+                "createdAt": "2022-03-30T03:56:14.784Z"         
+            },
+            "title": "Alert",
+            "sendTime": "2022-03-30T04:00:53.400Z"
+        }
+13)Auto Claim : 
+    Request : 
+        {
+            "en" : "LUCKY_CARD_16_AUTO_ON_OFF",
+            "data" : {
+                "auto_claim" : true/false
+            }
+        }
+    Response(Error): 
+        {
+            "err": true,
+            "msg": "Please Register User!",
+            "errcode": "0006",
+            "en": "LUCKY_CARD_16_AUTO_ON_OFF",
+            "data": {
+                "auto_claim" : true/false
+            },
+            "title": "Error!",
+            "sendTime": "2021-11-13T11:19:07.930Z"
+        }
+    Response(Success): 
+        {
+            "err": false,
+            "msg": "Data delivered successfully.!!",
+            "errcode": "0000",
+            "en": "LUCKY_CARD_16_AUTO_ON_OFF",
+            "data": {
+                "auto_claim" : true/false
+            },
+            "title": "Alert",
+            "sendTime": "2022-04-05T04:51:43.352Z"
+        }
+13)Reset Password: 
+    Request : 
+        {
+            "en" : "RESET_PASSWORD",
+            "data" : {
+                "new_password" : "asasf"
+            }
+        }
+    Response(Error): 
+        {
+            "err": true,
+            "msg": "Password update successfull",
+            "errcode": "1111",
+            "en": "RESET_PASSWORD",
+            "data": {
+                
+            },
+            "title": "Secuss!",
+            "sendTime": "2021-11-13T11:19:07.930Z"
+        }
+    
+=>Lucky Cards Game Event : 
+1)Game Init Event : 
+    Response(Success): 
+        {
+            "err": false,
+            "msg": "",
+            "errcode": "0000",
+            "en": "LUCKY_CARD_INIT_GAME",
+            "data": {
+                "time": 5,
+                "msg": "New Round Start"
+            },
+            "title": "Alert",
+            "sendTime": "2022-03-14T06:26:48.898Z"
+        }
+2)Game Timer Start : 
+    Response(Success): 
+        {
+            "err": false,
+            "msg": "",
+            "errcode": "0000",
+            "en": "LUCKY_CARD_GAME_TIMER_START",
+            "data": {
+                "timer": 90
+            },
+            "title": "Alert",
+            "sendTime": "2022-03-14T06:26:54.018Z"
+        }
+3)Spin Start : 
+    Response(Success): 
+        {
+            "err": false,
+            "msg": "",
+            "errcode": "0000",
+            "en": "LUCKY_CARD_START_SPIN",
+            "data": {
+                "timer": 5,
+                "win_card": "l-11",
+                "reward": 0
+            },
+            "title": "Alert",
+            "sendTime": "2022-04-05T08:46:50.295Z"
+        }
+4)Winner Declare : 
+    Response(Success): 
+        {
+            "err": false,
+            "msg": "",
+            "errcode": "0000",
+            "en": "LUCKY_CARD_WINNER_DECLARE",
+            "data": {
+                "win_card": "l-11",
+                "last_win_cards": [
+                    "f-14",
+                    "k-11",
+                    "k-14",
+                    "l-11",
+                    "f-12",
+                    "k-12",
+                    "k-11",
+                    "l-14",
+                    "k-13",
+                    "l-11"
+                ],
+                "game_config": {
+                    "COMMISSION": 3.5,
+                    "REWARD_X": 0,
+                    "REWARD_NORMAL": 70,
+                    "DRAW_TIME": 90,
+                    "SPIN_TIME": 5,
+                    "NEXT_GAME_TIME": 5
+                }
+            },
+            "title": "Alert",
+            "sendTime": "2022-04-05T08:46:55.311Z"
+        }

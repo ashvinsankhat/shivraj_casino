@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>777 Games</title>
+    
+    <!-- CSS (load bootstrap from a CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      body { padding-top:50px; }
+    </style>
+    <script type="text/javascript">
+        // document.getElementById("login").style.display = "none";
+        var socket = io.connect("http://13.126.93.228:3001");
+        
+		function FillData(en){
+            console.log("FillData : en :",en);
+			if(en == 'SP'){
+				var mobile_number = document.getElementById('mobile_number').value;
+				var data = {
+                    mobile_number : mobile_number
+                };
+                socket.emit("req",{en:en, data:data});
+			}
+			if(en == 'testEvent'){
+				var eventData = document.getElementById('eventData').value;
+                
+                var data  = (eventData);
+                console.log("Test Event data : ",data);
+                socket.emit("req",data);
+			}
+        }
+        
+        
+        var a = 1;
+        // socket.emit("req",{en:"HOME", data:{name : "ASHVIN", lastname : "SANKHAT"}});
+		socket.on('res', function(data){
+            // 
+            let response  = data;
+            console.log("Condition ::: ",response);
+            
+
+        })
+        socket.on("connect", () => {
+            console.log("Socket Is connected!!"); // false
+        });
+        socket.on('disconnect', function(data){
+            console.log("Socket disconnect....!")
+		})
+	</script>
+</head>
+<body class="container">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div style="width: 100%;">
+            <div   style="text-align: center;"><h2>:: Socket event Test ::</h2></div >
+        </div>
+    </nav>
+</header>
+
+<main>
+<div class="jumbotron">
+    <div style="width: 100%;height: 100%;">
+        <div class="login" id= "login" >
+            <form name="login">
+                <table align="center">
+                    <tr>
+                        <td>Enter mobile Number ::</td>
+                        <td><input type="text" name="mobile_number" id="mobile_number" value="0000044665"></td>
+                        <td></td>
+                        <td><input type="button" name="login" id="login" onclick="FillData('SP')" value="Login"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="eventTest" style="align-self: center;">
+            <form name="eventTest">
+                <table align="center">
+                    <tr>
+                        <td>Enter Simple Request:</td>
+                        <!-- <td><input type="text" name="mobile_number" id="mobile_number" value="0000044665"></td> -->
+                        <td></td>
+                        <td>Event Response :</td>
+                        <!-- <td><input type="button" name="login" id="login" onclick="FillData('SP')" value="Login"></td> -->
+                    </tr>
+                    <tr>
+                        <td><textarea  rows="1000" cols="1000"  name="eventData" id="eventData" style=" overflow:scroll;margin-top: 0px;margin-bottom: 0px;height: 300px;width: 300px;" ></textarea></td>
+                        <td><input type="button" name="request" id="request" onclick="FillData('testEvent')" value="Send"></td>
+                        <td><textarea name="response" id="response" style="margin-top: 0px;margin-bottom: 0px;height: 300px;width: 300px;"></textarea></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+</main>
+<footer>
+    <p class="text-center text-muted">&copy; Copyright 2021 The Awesome People</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+{
+	"SERVER_PREFIX": "s1_*",
+	"BASE_URL": "http://3.108.193.245:3000/",
+
+	"SOCKET_URL": "http://3.108.193.245:3001",
+
+	"S3_URL": "https://rummygameplay.s3.ap-south-1.amazonaws.com/",
+
+	"DB_PROTO": "mongodb",
+	"DB_NAME": "shivrahpune",
+	"DB_USERNAME": "shivrahpune",
+	"DB_HOST": "3.108.193.245",
+	"DB_PORT": 27017,
+	"DB_PASSWORD": "shivrahpune123",
+
+	"RMQ_HOST": "3.108.193.245",
+	"RMQ_LOGIN": "shivrahpune",
+	"RMQ_PASSWORD": "shivrahpune@123",
+	"RMQ_VHOST": "shivrahpune",
+
+	"RDS_HOST": "3.108.193.245",
+	"RDS_AUTH": "shivrahpune@123",
+	"REDIS_DB": 1,
+
+	"GAME_NAME": "12 Lucky Cards",
+
+	"IS_DEV_MODE": true,
+
+	"TEST_MOBILE_NO": [],
+
+	"CRASHMAILSEND": "rummyPlay@gmail.com",
+	"SES_ACCESS_KEY": "",
+	"SES_SECRET_ACCESS_KEY": "",
+
+	"CASH_FREE": {
+		"APP_ID": "190074debcf83f2186f78085cf470091",
+		"SECRET_KEY": "716b87c197aa81bfb71effcb22b9dbec28be42c5",
+		"URL": "https://api.cashfree.com/",
+		"ENV": "PROD"
+	},
+
+	"PAYTM": {
+		"MERCHANT_KEY": "uu3RVh&A@%9RXjKJ",
+		"MID": "mKJjbA74765139133519",
+		"INDUSTRY_TYPE_ID": "Retail",
+		"CHANNEL_ID": "WAP",
+		"WEBSITE": "WEBSTAGING",
+		"CALLBAKURL": "https://securegw.paytm.in/theia/paytmCallback",
+		"URL": "https://securegw.paytm.in/order/process",
+		"STATUS_URL": "https://securegw.paytm.in/order/status"
+	},
+
+	"FASTSMS": {
+		"URL": "https://www.fast2sms.com/dev/bulkV2",
+		"API_KEY": "3pwm7tu8SoBR0hP2lYncIUkrKC6XDxO1QeZyvHzTLM4WFaAVGdrfT5ZeiQ7HgUE4DAsLa9RSqPd1z2wM",
+		"SENDER_ID": "SDIPFX"
+	},
+
+	"START_BOT": true
+}

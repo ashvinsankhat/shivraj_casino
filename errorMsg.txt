@@ -1,0 +1,22 @@
+{
+    code : "0001",
+    msg  : "User session not set!";
+},{
+    code : "0002",
+    msg  : "Enter Valid mobile Number!";
+},{
+    code : "0003",
+    msg  : "Mobile Number already exists!";
+},{
+    code : "0004",
+    msg  : "Mobile Number not register!";
+},{
+    code : "0005",
+    msg  : "Enter valid referal or couponcode!";
+},{
+    code : "0006",
+    msg  : "Username already exists";
+},{
+    code : "0007",
+    msg  : "Incorrect OTP";
+}

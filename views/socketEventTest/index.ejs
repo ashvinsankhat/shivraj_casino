@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./head'); %>
+</head>
+<body class="container">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+<!-- <script type="text/javascript" src="http://localhost:3000/socket.io/socket.io.js"></script> -->
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/pbkdf2.js"></script> -->
+
+<script src="/views/socketEventTest/js/enc$dec.js"></script>
+
+<script type="text/javascript">
+
+    let masterKey = "DFK8s58uWFCF4Vs8NCrgTxfMLwjL9WUy";
+    let privateKey = new Buffer.allocUnsafeSlow(10);
+    let privateKey = Buffer.from(masterKey, "utf8");
+
+    console.log("privateKey : ", privateKey);
+    
+    let ct = "CFLyUi/hT3R0SBWha2Hj3RSa7N8tRGfWJs+Wpv9Qr1bBfsiG1uzbqTcUU1F+QyQB";
+    // var  masterKey = "253D3FB468A0E24677C28A624BE0F939";
+    var salt ="0000000000000000";
+    var iterations = 100; 
+    var keySize = 256;
+    var ivSize = 128;
+    var outputKey = CryptoJS.PBKDF2(masterKey, salt, {
+        keySize: (keySize+ivSize)/32,
+        iterations: iterations
+    });
+    // // the underlying words arrays might have more content than was asked: remove insignificant words
+    // outputKey.clamp();
+
+    // // split key and IV
+    // var secretKey = CryptoJS.lib.WordArray.create(outputKey.words.slice(0, keySize/32));
+    // // var secretKey = CryptoJS.lib.WordArray.create(masterKey.slice(0, 32));
+    // var secretKey = CryptoJS.lib.WordArray.create(32);
+    var iv = CryptoJS.lib.WordArray.create(16);
+    var secretKey = CryptoJS.lib.WordArray.create(masterKey).toString(CryptoJS.enc.Base64);
+    // // var iv = CryptoJS.lib.WordArray.create(outputKey.words.slice(keySize/32));
+
+    console.log('secretKey->', secretKey.toString(CryptoJS.enc.Base64));
+    console.log('iv->', iv.toString(CryptoJS.enc.Base64));
+
+    var secretKey = {"type":"Buffer","data":[68,70,75,56,115,53,56,117,87,70,67,70,52,86,115,56,78,67,114,103,84,120,102,77,76,119,106,76,57,87,85,121]}
+    iv = {"type":"Buffer","data":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}
+    console.log("iv :: ",iv);
+    var decrypted = CryptoJS.AES.decrypt(ct, JSON.stringify(secretKey), {iv: JSON.stringify(iv)});//Default mode CBC { mode: CryptoJS.mode.CFB });
+    console.log('CipherText->', ct);
+    console.log('ClearText decrypted', decrypted.toString(CryptoJS.enc.Utf8));
+
+
+    var socket = io.connect("http://3.7.114.241:5006/");
+    
+    socket.emit("req", {en:"HOME", data:{name : "ASHVIN", lastname : "SANKHAT"}});
+    socket.on('res', function(data){
+        console.log("Response ::: ", data);
+
+    })
+</script>
+
+<header>
+  <%- include('./header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <div style="width: 100%;height: 100%;">
+        <div style="align-self: center;">
+            <form name="login">
+                <table align="center">
+                    <tr>
+                        <td>Enter mobile Number ::</td>
+                        <td><input type="text" value= "00000"/></td>
+                        <td></td>
+                        <td><input type="button" name="login" id="login" onclick="FillData('SP')" value="Login"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+  </div>
+</main>
+<footer>
+    <p class="text-center text-muted">&copy; Copyright 2021 The Awesome People</p>
+</footer>
+
+</body>
+</html>

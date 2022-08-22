@@ -1,0 +1,42 @@
+{
+  "name": "MR",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Retention.js",
+  "dependencies": {
+    "amqp": "^0.2.7",
+    "clone-deep": "^4.0.1",
+    "dateformat": "^3.0.3",
+    "ejs": "^3.1.6",
+    "express": "^4.16.4",
+    "graceful-fs": "^4.1.15",
+    "javascript-fortuna": "^1.0.10",
+    "md5": "2.2.1",
+    "MD5": "1.3.0",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.1",
+    "mongo-round": "^1.0.0",
+    "mongoose": "^5.13.13",
+    "multer": "^1.4.1",
+    "multer-s3": "^1.4.1",
+    "nanoid": "^3.3.1",
+    "node-schedule": "^1.3.1",
+    "randomstring": "1.1.5",
+    "redis": "^2.8.0",
+    "request": "^2.88.0",
+    "serve-favicon": "^2.5.0",
+    "socket.io": "2.4.1",
+    "underscore": "^1.9.1",
+    "urlencode": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.artoon.in/Mobius/rummy-nodejs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

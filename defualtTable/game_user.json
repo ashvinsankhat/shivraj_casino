@@ -1,0 +1,31 @@
+{
+    "flags" : {
+        "is_online" : 1,
+        "is_robot" : 0
+    },
+    "lasts" : {
+        "last_login" : new Date("2022-03-09T03:29:45.752Z")
+    },
+    "counters" : {
+        "game_win" : 0,
+        "game_loss" : 0
+    },
+    "profile_url" : "image_avatar/avatar_1.png",
+    "device_type" : "",
+    "chips" : 20000,
+    "game_winning" : 23,
+    "app_version" : "0.1",
+    "android_version" : "vivo V2040 Handheld",
+    "refferal_code" : "1iaybtyr",
+    "table_id" : "",
+    "status" : "",
+    "id" : 33,
+    "display_user_name" : "ludo_33",
+    "user_name" : "hardik",
+    "password" : "hardik",
+    "unique_id" : "ludo_0000000033",
+    "sck_id" : "",
+    "createdAt" : new Date("2022-03-09T03:29:45.841Z"),
+    "updatedAt" : new Date("2022-03-13T02:44:07.965Z"),
+    "__v" : 0
+}

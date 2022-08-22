@@ -1,0 +1,147 @@
+/* 1 */
+[
+    {
+        "_id" : ObjectId("6263ac95458206f7d7572fe7"),
+        "game_type" : "lucky_cards_16",
+        "reward_x" : 0,
+        "reward_card" : "",
+        "winning_percentage" : 20.0,
+        "win_loss_user" : {
+            "user_id" : {},
+            "status" : "won"
+        },
+        "updatedAt" : ISODate("2022-07-05T09:37:43.437Z"),
+        "createdAt" : ISODate("2022-04-28T10:06:06.204Z")
+    },
+    {
+        "_id" : ObjectId("6263acb3458206f7d7572fe8"),
+        "game_type" : "lucky_cards_12",
+        "reward_x" : 0,
+        "reward_card" : "",
+        "winning_percentage" : 30.0,
+        "win_loss_user" : {
+            "user_id" : {},
+            "status" : "won"
+        },
+        "updatedAt" : ISODate("2022-07-05T09:37:43.427Z"),
+        "createdAt" : ISODate("2022-04-28T10:06:06.204Z")
+    },
+    {
+        "_id" : ObjectId("6263acc1458206f7d7572fe9"),
+        "game_type" : "triple_chance",
+        "reward_x" : 0,
+        "reward_card" : "",
+        "winning_percentage" : 20.0,
+        "win_loss_user" : {
+            "user_id" : {},
+            "status" : "won"
+        },
+        "updatedAt" : ISODate("2022-07-05T09:25:52.541Z"),
+        "createdAt" : ISODate("2022-04-28T10:06:06.204Z")
+    },
+    {
+        "_id" : ObjectId("6263acd3458206f7d7572fea"),
+        "game_type" : "roulette",
+        "reward_x" : 0,
+        "reward_card" : "",
+        "winning_percentage" : 30.0,
+        "win_loss_user" : {
+            "user_id" : {},
+            "status" : "won"
+        },
+        "updatedAt" : ISODate("2022-07-05T09:38:24.464Z"),
+        "createdAt" : ISODate("2022-04-28T10:06:06.204Z")
+    },
+    {
+        "_id" : ObjectId("6279fddca5daf6377d48b45c"),
+        "game_type" : "roulette_zero",
+        "reward_x" : 0,
+        "reward_card" : "",
+        "winning_percentage" : 20.0,
+        "win_loss_user" : {
+            "user_id" : {},
+            "status" : "won"
+        },
+        "updatedAt" : ISODate("2022-07-05T09:37:53.458Z"),
+        "createdAt" : ISODate("2022-04-28T10:06:06.204Z")
+    },
+    {
+        "_id" : ObjectId("6279fde3a5daf6377d48b45d"),
+        "game_type" : "single_chance",
+        "reward_x" : 0,
+        "reward_card" : "",
+        "winning_percentage" : 30.0,
+        "win_loss_user" : {
+            "user_id" : {},
+            "status" : "won"
+        },
+        "updatedAt" : ISODate("2022-07-05T09:37:53.465Z"),
+        "createdAt" : ISODate("2022-04-28T10:06:06.204Z")
+    },
+    {
+        "_id" : ObjectId("629728d0e06ff22d569ccb87"),
+        "createdAt" : ISODate("2022-04-28T10:06:06.204Z"),
+        "game_type" : "roulette_zero_3d",
+        "reward_card" : "",
+        "reward_x" : 0,
+        "updatedAt" : ISODate("2022-07-05T09:37:53.457Z"),
+        "win_loss_user" : {
+            "user_id" : {},
+            "status" : "won"
+        },
+        "winning_percentage" : 30.0
+    },
+    {
+        "_id" : ObjectId("629728d4e06ff22d569ccb88"),
+        "createdAt" : ISODate("2022-04-28T10:06:06.204Z"),
+        "game_type" : "single_chance_3d",
+        "reward_card" : "",
+        "reward_x" : 0,
+        "updatedAt" : ISODate("2022-07-05T09:38:20.098Z"),
+        "win_loss_user" : {
+            "user_id" : {},
+            "status" : "won"
+        },
+        "winning_percentage" : 30.0
+    },
+    {
+        "_id" : ObjectId("629728dce06ff22d569ccb89"),
+        "createdAt" : ISODate("2022-04-28T10:06:06.204Z"),
+        "game_type" : "andar_bahar",
+        "reward_card" : "",
+        "reward_x" : 0,
+        "updatedAt" : ISODate("2022-07-05T09:38:05.250Z"),
+        "win_loss_user" : {
+            "user_id" : {},
+            "status" : "won"
+        },
+        "winning_percentage" : 30.0,
+        "reward_andar_bahar" : "Bahar"
+    },
+    {
+        "_id" : ObjectId("629728dfe06ff22d569ccb8a"),
+        "createdAt" : ISODate("2022-04-28T10:06:06.204Z"),
+        "game_type" : "roulette_european",
+        "reward_card" : "",
+        "reward_x" : 0,
+        "updatedAt" : ISODate("2022-07-05T09:37:43.435Z"),
+        "win_loss_user" : {
+            "user_id" : {},
+            "status" : "won"
+        },
+        "winning_percentage" : 30.0
+    },
+    {
+        "_id" : ObjectId("62a7f834103911de9a1f833b"),
+        "game_type" : "lucky_sorat",
+        "reward_x" : 0,
+        "reward_card" : "",
+        "winning_percentage" : 30.0,
+        "win_loss_user" : {
+            "user_id" : {},
+            "status" : "won"
+        },
+        "updatedAt" : ISODate("2022-07-05T09:37:54.866Z"),
+        "createdAt" : ISODate("2022-04-28T10:06:06.204Z")
+    }
+]
