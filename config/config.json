@@ -9,16 +9,16 @@
 	"DB_PROTO": "mongodb",
 	"DB_NAME": "shivrahpune",
 	"DB_USERNAME": "shivrahpune",
-	"DB_HOST": "3.108.193.245",
+	"DB_HOST": "localhost",
 	"DB_PORT": 27017,
 	"DB_PASSWORD": "shivrahpune123",
 
-	"RMQ_HOST": "3.108.193.245",
+	"RMQ_HOST": "localhost",
 	"RMQ_LOGIN": "shivrahpune",
 	"RMQ_PASSWORD": "shivrahpune@123",
 	"RMQ_VHOST": "shivrahpune",
 
-	"RDS_HOST": "3.108.193.245",
+	"RDS_HOST": "localhost",
 	"RDS_AUTH": "shivrahpune@123",
 	"REDIS_DB": 1,
 
