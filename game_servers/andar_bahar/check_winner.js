@@ -8,7 +8,250 @@ const {
 } = require("./report_track");
 
 const { get_admin_game_info } = require("./admin_game_info");
+module.exports.test_check_winner = asyn => {
+	let winner_users = [];
+	let win_card = "c-7";
+	let win_info = {
+		cards: "c-7",
+		reward: 0,
+		win_amount: 0,
+		last_card_throw: "Bahar",
+		deal_card: [
+			"f-9",
+			"c-1",
+			"c-4",
+			"f-12",
+			"l-1",
+			"l-10",
+			"f-3",
+			"l-13",
+			"f-6",
+			"k-7",
+		],
+	};
+	let cards = win_card.split("-");
+	let win_array = [cards[0].toString()];
+	win_array.push(cards[1].toString());
 
+	if (cards[0].toString() == "c" || cards[0].toString() == "l")
+		win_array.push("cl");
+	if (cards[0].toString() == "k" || cards[0].toString() == "fl")
+		win_array.push("fk");
+
+	csl("add_winning_amount win_array : ", win_array);
+	if (Number(cards[1]) >= 1 && Number(cards[1]) <= 6) win_array.push("A_To_6");
+	if (Number(cards[1]) >= 8 && Number(cards[1]) <= 13)
+		win_array.push("8_To_13");
+
+	win_array.push(win_info.last_card_throw);
+	csl("add_winning_amount win_array : ", win_array);
+
+	let gameBetInfo = {
+		_id: "6364d92787f264ff8cc4d644",
+		game_id: "A8S1FKWIW5PZ",
+		game_type: "andar_bahar",
+		ticket_id: "BGVKN686F1",
+		total_bet_amount: 500,
+		total_win_amount: 1000,
+		x_reward_amount: 0,
+		commission_amount: 0,
+		total_end_amount: 0,
+		result_card: "c-7",
+		draw_time: "2022-11-04T09:19:51.451Z",
+		status: 3,
+		user_id: "63401b200a063560dc0a2f02",
+		card_details: {
+			A_To_6: 500,
+		},
+		createdAt: "2022-11-04T09:19:35.687Z",
+		updatedAt: "2022-11-04T09:19:54.371Z",
+		__v: 0,
+	};
+	let win_cards = [];
+	let x_reward = 0;
+	if (gameBetInfo != null) {
+		let card_details = gameBetInfo.card_details;
+
+		let total_win_amount = 0;
+		let total_bet_amount = gameBetInfo.total_bet_amount;
+
+		for (let keys in card_details) {
+			csl("add_winning_amount  bet : ", card_details[keys], keys);
+
+			if (win_array.indexOf(keys) != -1) {
+				win_cards.push(keys);
+				let bet_value = Number(card_details[keys]);
+				let win_amount = 0;
+
+				n_reward = 12;
+
+				if (keys == "A_To_6" || keys == "8_To_K") {
+					n_reward = 2;
+				} else if (keys == "cl" || keys == "fk") {
+					n_reward = 1.95;
+				} else if (keys == "c" || keys == "f" || keys == "l" || keys == "k") {
+					n_reward = 3.75;
+				} else if (keys == "Under" || keys == "Bahar") {
+					n_reward = 2;
+				}
+				win_amount = Number(bet_value) * n_reward;
+
+				if (x_reward != 0) win_amount = win_amount * x_reward;
+
+				total_win_amount = total_win_amount + win_amount;
+			}
+		}
+		csl("add_winning_amount  total_win_amount : ", total_win_amount);
+		total_bet = total_bet + total_bet_amount;
+
+		// if (total_win_amount > 0) {
+		// 	total_win_prize = total_win_prize + total_win_amount;
+		// 	total_win = total_win + total_win_amount;
+		// 	let uwh = {
+		// 		_id: MongoID(gameBetInfo.user_id),
+		// 	};
+		// 	let uProject = {
+		// 		cards_16_config: 1,
+		// 	};
+		// 	csl("place_bet uwh, uProject : ", uwh, uProject);
+
+		// 	let userInfo = await GameUser.findOne(uwh, uProject).lean();
+		// 	csl("place_bet userInfo : ", userInfo);
+
+		// 	let response = {
+		// 		win_card: win_cards,
+		// 		win_amount: total_win_amount,
+		// 		user_id: gameBetInfo.user_id,
+		// 	};
+		// 	let wh = {
+		// 		_id: gameInfo._id,
+		// 	};
+		// 	let updateData = {
+		// 		$inc: {
+		// 			winners: 1,
+		// 			total_bet_amount: -total_win_amount,
+		// 		},
+		// 		$push: {
+		// 			winner_users: gameBetInfo.ticket_id,
+		// 		},
+		// 	};
+		// 	csl("check_winner wh , project 1: ", wh, updateData);
+
+		// 	let gameInfo1 = await AndarBahars.findOneAndUpdate(wh, updateData, {
+		// 		new: true,
+		// 	});
+		// 	csl("check_winner gameInfo1 : ", gameInfo1);
+
+		// 	winner_users.push(response);
+
+		// 	let auto_claim = false;
+
+		// 	/*
+		//         0 = blank
+		//         1 = cancelled
+		//         2 = not_claim
+		//         3 = claim
+		//         4 = loss
+		//     */
+
+		// 	let status = auto_claim ? 3 : 2;
+
+		// 	let commision_amount = await win_tracks(
+		// 		total_bet_amount,
+		// 		total_win_amount,
+		// 		commission_rate,
+		// 		{ _id: gameBetInfo.user_id }
+		// 	);
+		// 	csl("check_winner commision_amount : ", commision_amount);
+
+		// 	let wh16 = {
+		// 		user_id: gameBetInfo.user_id,
+		// 		ticket_id: gameBetInfo.ticket_id,
+		// 	};
+		// 	let updateData16 = {
+		// 		$set: {
+		// 			x_reward_amount: x_reward,
+		// 			commission_amount: commision_amount,
+		// 			total_win_amount: total_win_amount,
+		// 			status: status,
+		// 			result_card: gameInfo.win_card,
+		// 			draw_time: new Date(),
+		// 		},
+		// 	};
+
+		// 	let gameTrackInfo = await Lucky16CardTracks.findOneAndUpdate(
+		// 		wh16,
+		// 		updateData16,
+		// 		{ new: true }
+		// 	);
+		// 	csl("check_winner gameTrackInfo : ", gameTrackInfo);
+
+		// 	// if(auto_claim){
+
+		// 	//     await claim_tracks(total_win_amount, {_id : gameBetInfo.user_id});
+		// 	//     await addWallet(gameBetInfo.user_id, total_win_amount, 2, "Single Chance winner", gameInfo1);
+
+		// 	// }else{
+
+		// 	await unclaim_tracks(total_win_amount, {
+		// 		_id: gameBetInfo.user_id,
+		// 	});
+
+		// 	// }
+
+		// 	response["total_bet_amount"] = total_bet_amount;
+		// 	response["ticket_id"] = gameBetInfo.ticket_id;
+
+		// 	// respSendActions.SendDataToUidDirect( gameBetInfo.user_id.toString() , 'LUCKY_CARD_WIN', response);
+		// } else {
+		// 	/*
+		//         0 = blank
+		//         1 = cancelled
+		//         2 = auto-claim
+		//         3 = claim
+		//         4 = loss
+		//     */
+		// 	let commision_amount = await loss_tracks(
+		// 		total_bet_amount,
+		// 		0,
+		// 		commission_rate,
+		// 		{
+		// 			_id: gameBetInfo.user_id,
+		// 		}
+		// 	);
+		// 	csl("check_winner commision_amount : ", commision_amount);
+
+		// 	let wh16 = {
+		// 		user_id: gameBetInfo.user_id,
+		// 		ticket_id: gameBetInfo.ticket_id,
+		// 	};
+		// 	let updateData16 = {
+		// 		$set: {
+		// 			x_reward_amount: x_reward,
+		// 			commission_amount: commision_amount,
+		// 			status: 4,
+		// 			result_card: gameInfo.win_card,
+		// 			draw_time: new Date(),
+		// 		},
+		// 	};
+		// 	let gameTrackInfo = await Lucky16CardTracks.findOneAndUpdate(
+		// 		wh16,
+		// 		updateData16,
+		// 		{ new: true }
+		// 	);
+		// 	csl("check_winner gameTrackInfo : ", gameTrackInfo);
+
+		// 	// let response = {
+		// 	//     ticket_id : gameBetInfo.ticket_id,
+		// 	//     win_card : [],
+		// 	//     win_amount : 0,
+		// 	//     total_bet_amount : total_bet_amount,
+		// 	//     user_id : gameBetInfo.user_id
+		// 	// }
+		// 	// respSendActions.SendDataToUidDirect( gameBetInfo.user_id , 'LUCKY_CARD_LOSE', response);
+		// }
+	}
+};
 module.exports.check_winner = async table_id => {
 	let wh1 = {};
 	let gameInfos = await AndarBahars.findOne(wh1, {}).lean();
@@ -126,8 +369,8 @@ module.exports.add_winning_amount = async gameInfo => {
 	if (cards[0].toString() == "k" || cards[0].toString() == "fl")
 		win_array.push("fk");
 
-	if (Number(cards[1]) >= 1 || Number(cards[1]) <= 6) win_array.push("A_To_6");
-	if (Number(cards[1]) >= 8 || Number(cards[1]) <= 13)
+	if (Number(cards[1]) >= 1 && Number(cards[1]) <= 6) win_array.push("A_To_6");
+	if (Number(cards[1]) >= 8 && Number(cards[1]) <= 13)
 		win_array.push("8_To_13");
 
 	win_array.push(gameInfo.win_info.last_card_throw);
